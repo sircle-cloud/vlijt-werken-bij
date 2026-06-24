@@ -144,6 +144,35 @@
 /* body lock als menu open is */
 body.menu-locked{ overflow:hidden; }
 
+/* ============================================================
+   Mobiele polish (cross-page) — strak trekken + centreren
+   ============================================================ */
+
+/* De 'scroll'-hint in de hero botst met de hero-knoppen op mobiel.
+   Het is een desktop-cue; op mobiel/tablet verbergen we 'm. */
+@media(max-width:900px){
+  .hero-scroll{ display:none !important; }
+}
+
+/* Hero- en CTA-knoppen netjes gestapeld + full-width op smal scherm,
+   zodat ze gelijk ogen en gecentreerd aanvoelen (geen losse breedtes). */
+@media(max-width:600px){
+  .hero-ctas{ flex-direction:column; align-items:stretch; }
+  .hero-ctas .btn{ display:block; width:100%; text-align:center; }
+  .cta-btns{ flex-direction:column; align-items:stretch; }
+  .cta-btns .btn{ display:block; width:100%; text-align:center; }
+}
+
+/* Gecapte grids (vacaturekaarten / teamkaarten) hebben een max-width maar
+   geen auto-marge, waardoor ze op midden-brede schermen links plakken.
+   Centreren binnen de wrap. */
+@media(max-width:680px){
+  .vacs{ margin-left:auto; margin-right:auto; }
+}
+@media(max-width:600px){
+  .grid{ margin-left:auto; margin-right:auto; }
+}
+
 @media(prefers-reduced-motion:reduce){
   .nav-overlay, .nav-overlay *{ transition-duration:.001s !important; }
   .nav-burger .bx span{ transition-duration:.001s !important; }
