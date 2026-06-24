@@ -516,11 +516,28 @@ if(window.gsap && !reduce){
   gsap.utils.toArray('[data-par2]').forEach(function(img){
     gsap.fromTo(img,{yPercent:-9},{yPercent:9,ease:'none',scrollTrigger:{trigger:img.closest('section'),start:'top bottom',end:'bottom top',scrub:true}});
   });
-  gsap.utils.toArray('[data-count]').forEach(function(el){
-    var end=parseFloat(el.getAttribute('data-count')), dec=parseInt(el.getAttribute('data-dec')||'0',10), obj={v:0};
-    gsap.to(obj,{v:end,duration:1.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%'},onUpdate:function(){ el.textContent=obj.v.toFixed(dec); }});
-  });
 }
+
+// ---------- tellers (robuust op mobiel: IntersectionObserver i.p.v. ScrollTrigger) ----------
+(function(){
+  var counters=document.querySelectorAll('[data-count]');
+  if(!counters.length) return;
+  function fmt(el,v){ return v.toFixed(parseInt(el.getAttribute('data-dec')||'0',10)); }
+  function run(el){
+    var end=parseFloat(el.getAttribute('data-count')), dur=1500, t0=null;
+    function step(ts){ if(t0===null) t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=fmt(el,end*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+    setTimeout(function(){ el.textContent=fmt(el,end); }, dur+300); // vangnet: eindwaarde staat er altijd, ook als rAF stalt
+  }
+  if(reduce || !('IntersectionObserver' in window)){
+    counters.forEach(function(el){ el.textContent=fmt(el,parseFloat(el.getAttribute('data-count'))); });
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } });
+  },{threshold:.35});
+  counters.forEach(function(el){ io.observe(el); });
+})();
 </script>
 <script src="assets/menu.js?v=1"></script>
 </body>
