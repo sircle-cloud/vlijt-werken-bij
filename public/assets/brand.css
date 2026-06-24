@@ -1,0 +1,79 @@
+/* ============================================================
+   VLIJT Tandartsen · brand foundation voor werken.vlijttandartsen.nl
+   Typografie: ALLEEN Poppins (alle gewichten), conform brand.
+   Kleuren 1-op-1 van vlijttandartsen.nl (Bricks theme):
+   cream #fcfae4 · warm tan #f8edd2 · sage-licht #e9edcd
+   sage #ced5b4 · olijf #7f846a · ink #181916 · bruin #2b1e17 / #664836
+   ============================================================ */
+
+:root {
+  --cream:       #fcfae4;
+  --cream-warm:  #f8edd2;
+  --sage-light:  #e9edcd;
+  --sage:        #ced5b4;
+  --olive:       #7f846a;
+  --olive-deep:  #5e6450;
+  --ink:         #181916;
+  --brown:       #2b1e17;
+  --brown-mid:   #664836;
+
+  --font-body: 'Poppins', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-body);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+/* Knop conform child-theme: uppercase, letterspaced, harde offset-schaduw op hover */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: box-shadow .2s ease, transform .2s ease, background .2s ease;
+}
+.btn--solid {
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--cream);
+}
+.btn--solid:hover { box-shadow: 4px 4px 0 1px var(--sage); transform: translate(-1px,-1px); }
+.btn--outline {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(233, 237, 205, 0.5);
+}
+.btn--outline:hover { box-shadow: 4px 4px 0 1px var(--sage); border-color: var(--sage); }
+.btn--dark {
+  background: var(--ink);
+  color: var(--cream);
+  border: 1px solid var(--ink);
+}
+.btn--dark:hover { box-shadow: 4px 4px 0 1px var(--olive); transform: translate(-1px,-1px); }
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.slogan { font-style: italic; font-weight: 600; }

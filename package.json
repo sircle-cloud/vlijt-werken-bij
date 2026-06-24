@@ -1,0 +1,12 @@
+{
+  "name": "vlijt-werkenbij",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Werken bij VLIJT Tandartsen — employer-branding landingssite",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "multer": "^2.0.0"
+  }
+}

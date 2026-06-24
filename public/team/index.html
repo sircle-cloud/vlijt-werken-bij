@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Het team · Werken bij VLIJT Tandartsen, Eindhoven</title>
+<meta name="description" content="Maak kennis met het team van VLIJT Tandartsen in Strijp-S, Eindhoven. Klein, hecht en vooruitstrevend.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/brand.css?v=3">
+<link rel="stylesheet" href="../assets/menu.css?v=1">
+<style>
+:root{ --maxw:1720px; --gut:clamp(22px,5vw,110px); --ease:cubic-bezier(.22,1,.36,1); --gold:#C9A24B; --ink-soft:#4a5040; --olive-deep:#5e6450; }
+html{ scroll-behavior:smooth; } body{ background:var(--cream); color:var(--ink); overflow-x:hidden; }
+.wrap{ max-width:var(--maxw); margin:0 auto; padding:0 var(--gut); }
+.pad{ padding:clamp(80px,10vw,150px) 0; }
+.eyebrow{ display:inline-flex; align-items:center; gap:11px; font-size:13px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--olive); }
+.eyebrow::before{ content:""; width:28px; height:1.5px; background:var(--gold); }
+.eyebrow.on-dark{ color:var(--sage); }
+h1,h2,h3{ font-weight:800; letter-spacing:-.02em; line-height:1.02; }
+.display{ font-size:clamp(44px,7vw,104px); font-weight:800; letter-spacing:-.035em; line-height:.96; }
+.h2{ font-size:clamp(30px,3.7vw,60px); font-weight:800; letter-spacing:-.03em; line-height:1.04; }
+.lead{ font-size:clamp(17px,1.4vw,22px); line-height:1.6; color:var(--ink-soft); }
+
+/* nav */
+.nav{ position:fixed; top:0; left:0; right:0; z-index:50; transition:background .4s var(--ease), box-shadow .4s var(--ease), padding .4s var(--ease); }
+.nav-inner{ max-width:var(--maxw); margin:0 auto; padding:24px var(--gut); display:flex; align-items:center; justify-content:space-between; }
+.nav.scrolled{ background:var(--cream); box-shadow:0 1px 0 rgba(24,25,22,.06), 0 14px 40px -26px rgba(24,25,22,.35); }
+.nav.scrolled .nav-inner{ padding-top:15px; padding-bottom:15px; }
+.nav-logo img{ height:50px; display:block; transition:height .4s var(--ease); }
+.nav.scrolled .nav-logo img{ height:40px; }
+.nav-logo .logo-ink{ display:none; }
+.nav.scrolled .nav-logo .logo-cream{ display:none; } .nav.scrolled .nav-logo .logo-ink{ display:block; }
+.nav-links{ display:flex; align-items:center; gap:clamp(20px,2vw,38px); list-style:none; }
+.nav-links a{ color:var(--cream); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:1.4px; text-transform:uppercase; opacity:.9; transition:color .4s var(--ease),opacity .2s; }
+.nav.scrolled .nav-links a{ color:var(--ink); opacity:.85; }
+.nav .btn{ padding:12px 26px; font-size:12px; }
+.nav .nav-cta .btn{ background:transparent; color:var(--cream); border:1px solid rgba(244,239,224,.55); }
+.nav.scrolled .nav-cta .btn{ color:var(--ink); border-color:rgba(24,25,22,.3); }
+@media(max-width:900px){ .nav-links li:not(.nav-cta){ display:none; } }
+
+/* hero (olive) */
+.hero{ background:var(--olive); color:var(--cream); padding:clamp(150px,18vh,220px) 0 clamp(70px,9vw,120px); }
+.hero .display{ color:var(--cream); margin-top:22px; max-width:16ch; }
+.hero .lead{ color:rgba(244,239,224,.88); margin-top:26px; max-width:48ch; }
+
+/* band */
+.band{ position:relative; overflow:hidden; height:clamp(300px,40vw,520px); }
+.band img{ width:100%; height:122%; object-fit:cover; object-position:center 30%; display:block; will-change:transform; }
+
+/* team grid */
+.team .head{ max-width:54ch; margin-bottom:clamp(44px,5vw,80px); }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,2vw,34px); }
+@media(max-width:980px){ .grid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .grid{ grid-template-columns:1fr; max-width:460px; } }
+.member{ background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 0 rgba(24,25,22,.05); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
+.member:hover{ transform:translateY(-6px); box-shadow:0 36px 60px -34px rgba(24,25,22,.4); }
+.member .ph{ aspect-ratio:4/5; background-size:cover; background-position:center 18%; }
+.member .b{ padding:24px 24px 28px; }
+.member .role{ font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--olive); }
+.member h3{ font-size:21px; font-weight:700; margin:8px 0 12px; }
+.member p{ font-size:15px; line-height:1.55; color:#5c6150; font-style:italic; }
+.note{ margin-top:30px; font-size:13.5px; color:#6b7060; font-style:italic; }
+
+/* waarden */
+.waarden{ background:var(--cream-warm); }
+.vals{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(30px,3vw,56px); margin-top:56px; }
+@media(max-width:760px){ .vals{ grid-template-columns:1fr; gap:40px; } }
+.val{ border-top:2px solid var(--ink); padding-top:24px; }
+.val h3{ font-size:clamp(20px,1.7vw,26px); font-weight:700; }
+.val p{ font-size:15.5px; line-height:1.6; color:#5c6150; margin-top:10px; }
+
+/* cta */
+.cta{ background:var(--ink); color:var(--cream); text-align:center; }
+.cta .display{ color:var(--cream); font-size:clamp(38px,5vw,82px); max-width:18ch; margin:18px auto 0; }
+.cta .lead{ color:rgba(244,239,224,.82); max-width:46ch; margin:22px auto 34px; }
+.cta .eyebrow{ color:var(--sage); justify-content:center; display:inline-flex; }
+.cta-btns{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* footer */
+.foot{ background:var(--cream-warm); color:var(--ink); border-top:1px solid var(--sage); }
+.foot-in{ padding:54px var(--gut); max-width:var(--maxw); margin:0 auto; display:flex; flex-wrap:wrap; gap:28px; align-items:center; justify-content:space-between; }
+.foot img{ height:54px; } .foot .mid{ text-align:center; }
+.foot .slogan{ font-style:italic; font-weight:600; font-size:18px; color:var(--olive); }
+.foot a{ color:var(--ink); opacity:.75; font-size:13.5px; text-decoration:none; border-bottom:1px solid rgba(24,25,22,.3); }
+.foot .r{ font-size:12.5px; color:#6b7060; text-align:right; }
+@media(max-width:700px){ .foot-in{ flex-direction:column; } .foot .r{ text-align:center; } }
+@media(prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../">
+      <img class="logo-cream" src="../assets/vlijt-logo.png" alt="VLIJT Tandartsen">
+      <img class="logo-ink" src="../assets/vlijt-logo-ink.png" alt="VLIJT Tandartsen">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../#waarom">Waarom VLIJT</a></li>
+      <li><a href="../#vacatures">Vacatures</a></li>
+      <li><a href="../team/">Team</a></li>
+      <li><a href="../faq/">FAQ</a></li>
+      <li class="nav-cta"><a class="btn btn--outline" href="../#solliciteer">Solliciteer</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Het team</span>
+    <h1 class="display">Dit is waar je<br>straks bij hoort.</h1>
+    <p class="lead">Klein, hecht en vooruitstrevend. Een team dat elkaar helpt, elke dag wat bijleert, en er samen een leuke dag van maakt.</p>
+  </div>
+</header>
+
+<section class="band"><img data-par src="../assets/shoot/vlijt-30.jpg" alt="Het team van VLIJT in overleg"></section>
+
+<section class="team pad">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Even voorstellen</span>
+      <h2 class="h2" style="margin-top:20px;">De mensen achter VLIJT</h2>
+    </div>
+    <div class="grid">
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-blonde.jpg')"></div><div class="b"><div class="role">Tandartsassistent</div><h3>Maak kennis</h3><p>"Geen dag is hetzelfde, en dat maakt het juist zo leuk."</p></div></div>
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-38.jpg')"></div><div class="b"><div class="role">Tandarts</div><h3>Maak kennis</h3><p>"Hier krijg ik de tijd om mijn werk echt goed te doen."</p></div></div>
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-purple.jpg')"></div><div class="b"><div class="role">Mondhygiënist</div><h3>Maak kennis</h3><p>"Mijn eigen agenda, mijn eigen patiënten. Precies zoals het hoort."</p></div></div>
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-28.jpg')"></div><div class="b"><div class="role">Preventie-assistent</div><h3>Maak kennis</h3><p>"Het team voelt echt als een tweede thuis."</p></div></div>
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-coral.jpg')"></div><div class="b"><div class="role">Balie &amp; onthaal</div><h3>Maak kennis</h3><p>"Iedereen loopt hier met een glimlach binnen. En buiten."</p></div></div>
+      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-23.jpg')"></div><div class="b"><div class="role">Tandarts</div><h3>Maak kennis</h3><p>"We helpen elkaar, elke dag opnieuw. Dat maakt het verschil."</p></div></div>
+    </div>
+    <p class="note reveal">Dit is alvast een voorproefje. Binnenkort stellen we het hele team met naam en eigen verhaal aan je voor.</p>
+  </div>
+</section>
+
+<section class="waarden pad">
+  <div class="wrap">
+    <div class="reveal" style="max-width:50ch;">
+      <span class="eyebrow">Waar we voor staan</span>
+      <h2 class="h2" style="margin-top:20px;">Wat ons team bindt</h2>
+    </div>
+    <div class="vals">
+      <div class="val reveal"><h3>Samen</h3><p>Korte lijnen, elkaar helpen, en successen samen vieren. Je staat er nooit alleen voor.</p></div>
+      <div class="val reveal"><h3>Vooruit</h3><p>We blijven leren en investeren in elkaar. Met opleidingen, cursussen en de nieuwste technieken.</p></div>
+      <div class="val reveal"><h3>Met plezier</h3><p>Goede zorg begint bij een fijne sfeer. Daarom lachen we hier net zo veel als we werken.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta pad">
+  <div class="wrap">
+    <span class="eyebrow">Word collega</span>
+    <h2 class="display">Klaar om er<br>bij te horen?</h2>
+    <p class="lead">Bekijk de open vacatures of solliciteer direct. We maken graag kennis met je.</p>
+    <div class="cta-btns">
+      <a class="btn btn--solid" href="../#vacatures">Bekijk vacatures</a>
+      <a class="btn btn--outline" href="../#solliciteer">Solliciteer direct</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-in">
+    <a href="../"><img src="../assets/vlijt-logo-ink.png" alt="VLIJT Tandartsen"></a>
+    <div class="mid">
+      <div class="slogan">Lachen is beter leven.</div>
+      <a href="https://www.vlijttandartsen.nl">www.vlijttandartsen.nl</a>
+    </div>
+    <div class="r">Strijp-S, Eindhoven<br>© 2026 VLIJT Tandartsen</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+var nav=document.getElementById('nav');
+function onScroll(){ if(window.scrollY>40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(window.gsap && !reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('.reveal').forEach(function(el){ gsap.from(el,{y:44,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+  gsap.utils.toArray('[data-par]').forEach(function(img){ gsap.fromTo(img,{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:img.closest('.band'),start:'top bottom',end:'bottom top',scrub:true}}); });
+  setTimeout(function(){ gsap.utils.toArray('.reveal').forEach(function(el){ if(getComputedStyle(el).opacity==='0'){ el.style.opacity='1'; el.style.transform='none'; } }); }, 2400);
+}
+</script>
+<script src="../assets/menu.js?v=1"></script>
+</body>
+</html>

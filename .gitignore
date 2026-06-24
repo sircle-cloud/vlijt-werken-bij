@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# runtime data — bevat sollicitaties + geüploade CV's (persoonsgegevens, nooit committen)
+data/
+
+# os / editor
+.DS_Store
+*.log
+npm-debug.log*

@@ -1,0 +1,150 @@
+/* ============================================================
+   VLIJT Werken-bij — mobiel hamburger-menu (shared)
+   Minimalistisch · stylish · full-screen overlay
+   Wordt op elke pagina ingeladen; menu.js cloont de nav-links.
+   Geen JS-framework nodig: CSS-transities doen het werk.
+   ============================================================ */
+
+/* ---- hamburger-knop (alleen mobiel) ---- */
+.nav-burger{
+  display:none;
+  position:relative;
+  width:46px; height:46px;
+  margin-left:16px;
+  padding:0; border:0;
+  background:transparent;
+  cursor:pointer;
+  color:var(--cream);
+  flex:none;
+  align-items:center; justify-content:center;
+  -webkit-tap-highlight-color:transparent;
+  transition:color .4s var(--ease, cubic-bezier(.22,1,.36,1));
+  z-index:60;
+}
+.nav.scrolled .nav-burger{ color:var(--ink); }
+.nav.menu-open .nav-burger{ color:var(--ink); }
+
+.nav-burger .bx{ position:relative; width:26px; height:12px; display:block; }
+.nav-burger .bx span{
+  position:absolute; left:0; width:100%; height:2px;
+  background:currentColor; border-radius:2px;
+  transition:transform .4s var(--ease, cubic-bezier(.22,1,.36,1)),
+             top .3s var(--ease, cubic-bezier(.22,1,.36,1)),
+             width .3s ease;
+}
+.nav-burger .bx span:nth-child(1){ top:0; }
+.nav-burger .bx span:nth-child(2){ top:10px; }
+.nav.menu-open .nav-burger .bx span:nth-child(1){ top:5px; transform:rotate(45deg); }
+.nav.menu-open .nav-burger .bx span:nth-child(2){ top:5px; transform:rotate(-45deg); }
+
+/* logo altijd leesbaar als het cream-overlay openstaat */
+.nav.menu-open .nav-logo .logo-cream{ display:none; }
+.nav.menu-open .nav-logo .logo-ink{ display:block; }
+/* nav-balk transparant laten als menu open is (overlay is cream eronder) */
+.nav.menu-open{ background:transparent !important; box-shadow:none !important; }
+
+/* ---- full-screen overlay ---- */
+.nav-overlay{
+  position:fixed; inset:0; z-index:40;
+  background:var(--cream);
+  display:flex; flex-direction:column;
+  padding:clamp(110px,16vh,150px) var(--gut, 24px) clamp(34px,6vh,56px);
+  opacity:0; visibility:hidden;
+  transition:opacity .42s var(--ease, cubic-bezier(.22,1,.36,1)), visibility .42s;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.nav-overlay.open{ opacity:1; visibility:visible; }
+
+/* subtiele gouden hoekgloed voor wat sfeer */
+.nav-overlay::before{
+  content:""; position:absolute; top:-18%; right:-14%;
+  width:60vw; height:60vw; max-width:520px; max-height:520px;
+  background:radial-gradient(circle, rgba(201,162,75,.16), rgba(201,162,75,0) 68%);
+  pointer-events:none;
+}
+
+.nav-overlay-eyebrow{
+  font-size:12px; font-weight:600; letter-spacing:3px; text-transform:uppercase;
+  color:var(--olive); margin-bottom:clamp(20px,4vh,34px); display:flex; align-items:center; gap:11px;
+  opacity:0; transform:translateY(14px);
+  transition:opacity .5s ease .04s, transform .5s var(--ease, cubic-bezier(.22,1,.36,1)) .04s;
+}
+.nav-overlay-eyebrow::before{ content:""; width:26px; height:1.5px; background:var(--gold,#C9A24B); }
+.nav-overlay.open .nav-overlay-eyebrow{ opacity:1; transform:none; }
+
+.nav-overlay-links{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:clamp(4px,1.4vh,12px); }
+.nav-overlay-links li{
+  opacity:0; transform:translateY(20px);
+  transition:opacity .5s ease, transform .55s var(--ease, cubic-bezier(.22,1,.36,1));
+}
+.nav-overlay.open .nav-overlay-links li{ opacity:1; transform:none; }
+/* gestaffelde reveal */
+.nav-overlay.open .nav-overlay-links li:nth-child(1){ transition-delay:.08s; }
+.nav-overlay.open .nav-overlay-links li:nth-child(2){ transition-delay:.14s; }
+.nav-overlay.open .nav-overlay-links li:nth-child(3){ transition-delay:.20s; }
+.nav-overlay.open .nav-overlay-links li:nth-child(4){ transition-delay:.26s; }
+.nav-overlay.open .nav-overlay-links li:nth-child(5){ transition-delay:.32s; }
+.nav-overlay.open .nav-overlay-links li:nth-child(6){ transition-delay:.38s; }
+
+.nav-overlay-links a{
+  display:inline-flex; align-items:center; gap:14px;
+  font-family:var(--font-body);
+  font-size:clamp(30px,8.6vw,46px);
+  font-weight:800; letter-spacing:-.02em; line-height:1.08;
+  text-transform:none;
+  color:var(--ink); text-decoration:none;
+  padding:6px 0;
+  transition:color .25s ease;
+}
+.nav-overlay-links a .idx{
+  font-size:13px; font-weight:600; letter-spacing:1px; color:var(--olive);
+  align-self:flex-start; margin-top:10px; min-width:30px;
+}
+.nav-overlay-links a:hover,
+.nav-overlay-links a:active{ color:var(--olive); }
+
+/* laatste item (Solliciteer / CTA) als knop */
+.nav-overlay-links li.is-cta{ margin-top:clamp(16px,3vh,28px); }
+.nav-overlay-links li.is-cta a{
+  font-size:15px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+  background:var(--ink); color:var(--cream);
+  padding:17px 30px; border-radius:6px; gap:10px;
+}
+.nav-overlay-links li.is-cta a .idx{ display:none; }
+.nav-overlay-links li.is-cta a:hover{ color:var(--cream); box-shadow:5px 5px 0 1px var(--sage); transform:translate(-1px,-1px); }
+
+/* overlay-voet: slogan + contact */
+.nav-overlay-foot{
+  margin-top:auto; padding-top:clamp(26px,5vh,42px);
+  display:flex; flex-wrap:wrap; gap:8px 22px; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--sage);
+  opacity:0; transform:translateY(14px);
+  transition:opacity .5s ease .42s, transform .5s var(--ease, cubic-bezier(.22,1,.36,1)) .42s;
+}
+.nav-overlay.open .nav-overlay-foot{ opacity:1; transform:none; }
+.nav-overlay-foot .slogan{ font-style:italic; font-weight:600; color:var(--olive); font-size:16px; }
+.nav-overlay-foot a{ color:var(--ink); opacity:.7; font-size:13.5px; text-decoration:none; border-bottom:1px solid rgba(24,25,22,.28); }
+
+/* ---- schakelaar: hamburger tonen, desktop-nav verbergen ---- */
+@media(max-width:900px){
+  .nav .nav-links{ display:none !important; }
+  .nav-burger{ display:inline-flex; }
+}
+@media(min-width:901px){
+  .nav-overlay{ display:none; }
+}
+
+/* kleinere logo's op smalle schermen zodat balk niet te druk wordt */
+@media(max-width:600px){
+  .nav-logo img{ height:42px !important; }
+  .nav.scrolled .nav-logo img{ height:38px !important; }
+}
+
+/* body lock als menu open is */
+body.menu-locked{ overflow:hidden; }
+
+@media(prefers-reduced-motion:reduce){
+  .nav-overlay, .nav-overlay *{ transition-duration:.001s !important; }
+  .nav-burger .bx span{ transition-duration:.001s !important; }
+}
