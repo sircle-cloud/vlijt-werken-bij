@@ -23,7 +23,7 @@ VACATURES = [
             "Je bereidt behandelkamers voor en beheert materialen en sterilisatie",
             "Je denkt mee over de planning en hoe het slimmer kan",
         ],
-        "SALARIS": "€ 2.500 - € 3.300",
+        "SALARIS": "€ 2.423 - € 3.000",
         "QUOTE": "Je krijgt hier écht de tijd voor patiënten. Dat maakt het verschil, elke dag.",
         "QUOTE_VAN": "Tandartsassistent bij VLIJT",
     },
@@ -59,7 +59,7 @@ VACATURES = [
             "Je werkt samen met de mondhygiënist aan ons preventie-programma",
             "Je groeit mee: bijscholing richting (paro-)preventie hoort erbij",
         ],
-        "SALARIS": "€ 2.700 - € 3.500",
+        "SALARIS": "€ 2.700 - € 3.300",
         "QUOTE": "Patiënten elke keer een stapje verder helpen, daar word ik blij van.",
         "QUOTE_VAN": "Preventie-assistent bij VLIJT",
     },
@@ -260,14 +260,16 @@ form .btn{ align-self:flex-start; margin-top:8px; }
       <div class="basis">bruto per maand bij 38 uur, afhankelijk van ervaring</div>
     </div>
     <div class="vw-grid reveal">
-      <span class="vw">13e maand</span>
       <span class="vw">25 vakantiedagen</span>
+      <span class="vw">Pensioenregeling</span>
       <span class="vw">Opleidingsbudget</span>
-      <span class="vw">Volop doorgroei</span>
-      <span class="vw">Moderne praktijk</span>
       <span class="vw">Reiskostenvergoeding</span>
+      <span class="vw">Nieuwste apparatuur</span>
+      <span class="vw">Volop doorgroei</span>
+      <span class="vw">Teamactiviteiten</span>
     </div>
     <p class="krijg-note reveal">Transparant over salaris, zodat jij meteen weet waar je aan toe bent. Waar je in de range landt, hangt af van je ervaring.</p>
+    <p class="krijg-note reveal">We ondersteunen je in cursussen en helpen je zelfstandige handelingen ontwikkelen, van röntgenfoto's tot noodkronen. Zo kom je elke dag een stap verder.</p>
   </div>
 </section>
 
@@ -285,7 +287,7 @@ form .btn{ align-self:flex-start; margin-top:8px; }
       <h2 class="h2" style="margin-top:16px;">Van eerste klik tot meeloopdag</h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span><div class="lbl">Stap 01</div><h3>Solliciteer in 2 minuten</h3><p>Naam, gegevens, klaar. Een cv mag, maar hoeft niet.</p></div>
+      <div class="step reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span><div class="lbl">Stap 01</div><h3>Solliciteer in 2 minuten</h3><p>Naam en gegevens volstaan. Je cv meesturen stellen we op prijs.</p></div>
       <div class="step reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg></span><div class="lbl">Stap 02</div><h3>Kennismaken</h3><p>Een goed gesprek van een half uur. Bij ons, of eerst even bellen.</p></div>
       <div class="step reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.4 2 3.5 2 3.5-2 3.5-2"/><line x1="9" y1="9.5" x2="9.01" y2="9.5"/><line x1="15" y1="9.5" x2="15.01" y2="9.5"/></svg></span><div class="lbl">Stap 03</div><h3>Loop een dag mee</h3><p>Proef de sfeer op je eigen tempo. Daarna weet jij of het klikt.</p></div>
     </div>
@@ -310,7 +312,7 @@ form .btn{ align-self:flex-start; margin-top:8px; }
           <label class="upload">
             <input type="file" name="cv" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
             <span class="up-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5l-8.6 8.6a5 5 0 0 1-7.1-7.1l8.6-8.6a3.3 3.3 0 0 1 4.7 4.7l-8.6 8.6a1.6 1.6 0 0 1-2.3-2.3l7.9-7.9"/></svg></span>
-            <span class="up-tx"><b>CV uploaden</b><small>PDF of Word · optioneel</small></span>
+            <span class="up-tx"><b>CV uploaden</b><small>PDF of Word · graag meesturen</small></span>
           </label>
           <label class="upload">
             <input type="file" name="motivatie" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
