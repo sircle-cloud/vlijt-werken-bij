@@ -20,6 +20,7 @@ TARGETS = [
     ("index.html", 0),
     ("team/index.html", 1),
     ("faq/index.html", 1),
+    ("ontwikkeling/index.html", 1),
 ]
 
 def relativize(html: str, depth: int) -> str:

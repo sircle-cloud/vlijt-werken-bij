@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Het team · Werken bij VLIJT Tandartsen, Eindhoven</title>
-<meta name="description" content="Maak kennis met het team van VLIJT Tandartsen in Strijp-S, Eindhoven. Hecht, gemotiveerd en vooruitstrevend, met het team centraal.">
+<title>Jouw ontwikkeling · Werken bij VLIJT Tandartsen, Eindhoven</title>
+<meta name="description" content="Bij VLIJT leer je écht je vak: van scannen en verdoven tot noodkronen en fotografie. Met cursussen, begeleiding en volop ruimte om zelfstandig door te groeien.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
@@ -36,6 +36,8 @@ h1,h2,h3{ font-weight:800; letter-spacing:-.02em; line-height:1.02; }
 .nav-links{ display:flex; align-items:center; gap:clamp(20px,2vw,38px); list-style:none; }
 .nav-links a{ color:var(--cream); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:1.4px; text-transform:uppercase; opacity:.9; transition:color .4s var(--ease),opacity .2s; }
 .nav.scrolled .nav-links a{ color:var(--ink); opacity:.85; }
+.nav-links a:hover{ opacity:1; }
+.nav-links a[aria-current]{ opacity:1; }
 .nav .btn{ padding:12px 26px; font-size:12px; }
 .nav .nav-cta .btn{ background:transparent; color:var(--cream); border:1px solid rgba(244,239,224,.55); }
 .nav.scrolled .nav-cta .btn{ color:var(--ink); border-color:rgba(24,25,22,.3); }
@@ -43,34 +45,42 @@ h1,h2,h3{ font-weight:800; letter-spacing:-.02em; line-height:1.02; }
 
 /* hero (olive) */
 .hero{ background:var(--olive); color:var(--cream); padding:clamp(150px,18vh,220px) 0 clamp(70px,9vw,120px); }
-.hero .display{ color:var(--cream); margin-top:22px; max-width:16ch; }
-.hero .lead{ color:rgba(244,239,224,.88); margin-top:26px; max-width:48ch; }
+.hero .display{ color:var(--cream); margin-top:22px; max-width:15ch; }
+.hero .lead{ color:rgba(244,239,224,.88); margin-top:26px; max-width:52ch; }
+.hero-btns{ display:flex; gap:16px; flex-wrap:wrap; margin-top:38px; }
 
 /* band */
 .band{ position:relative; overflow:hidden; height:clamp(300px,40vw,520px); }
-.band img{ width:100%; height:122%; object-fit:cover; object-position:center 30%; display:block; will-change:transform; }
+.band img{ width:100%; height:122%; object-fit:cover; object-position:center 32%; display:block; will-change:transform; }
 
-/* team grid */
-.team .head{ max-width:54ch; margin-bottom:clamp(44px,5vw,80px); }
-.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,2vw,34px); }
-@media(max-width:980px){ .grid{ grid-template-columns:1fr 1fr; } }
-@media(max-width:600px){ .grid{ grid-template-columns:1fr; max-width:460px; } }
-.member{ background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 0 rgba(24,25,22,.05); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
-.member:hover{ transform:translateY(-6px); box-shadow:0 36px 60px -34px rgba(24,25,22,.4); }
-.member .ph{ aspect-ratio:4/5; background-size:cover; background-position:center 18%; }
-.member .b{ padding:24px 24px 28px; }
-.member .role{ font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--olive); }
-.member h3{ font-size:21px; font-weight:700; margin:8px 0 12px; }
-.member p{ font-size:15px; line-height:1.55; color:#5c6150; font-style:italic; }
-.note{ margin-top:30px; font-size:13.5px; color:#6b7060; font-style:italic; }
+/* aanpak + support */
+.aanpak .head{ max-width:58ch; }
+.aanpak .lead{ margin-top:24px; }
+.support{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(30px,3vw,56px); margin-top:clamp(46px,4vw,68px); }
+@media(max-width:760px){ .support{ grid-template-columns:1fr; gap:40px; } }
+.support .item{ border-top:2px solid var(--ink); padding-top:24px; }
+.support .item h3{ font-size:clamp(19px,1.5vw,25px); font-weight:800; }
+.support .item p{ font-size:15px; line-height:1.6; color:#5c6150; margin-top:11px; }
 
-/* waarden */
-.waarden{ background:var(--cream-warm); }
-.vals{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(30px,3vw,56px); margin-top:56px; }
-@media(max-width:760px){ .vals{ grid-template-columns:1fr; gap:40px; } }
-.val{ border-top:2px solid var(--ink); padding-top:24px; }
-.val h3{ font-size:clamp(20px,1.7vw,26px); font-weight:700; }
-.val p{ font-size:15.5px; line-height:1.6; color:#5c6150; margin-top:10px; }
+/* wat je leert — skill cards */
+.leert{ background:var(--cream-warm); }
+.leert .head{ max-width:56ch; }
+.leert .lead{ margin-top:22px; max-width:56ch; }
+.skillcards{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,1.6vw,26px); margin-top:clamp(42px,5vw,66px); }
+@media(max-width:900px){ .skillcards{ grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .skillcards{ grid-template-columns:1fr; max-width:460px; } }
+.skillcard{ background:#fff; border-radius:10px; padding:26px 26px 30px; box-shadow:0 1px 0 rgba(24,25,22,.05); border-top:2px solid var(--gold); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
+.skillcard:hover{ transform:translateY(-6px); box-shadow:0 32px 56px -34px rgba(24,25,22,.4); }
+.skillcard .n{ font-family:'Poppins'; font-size:12px; font-weight:700; letter-spacing:2px; color:var(--gold); }
+.skillcard h3{ font-size:20px; font-weight:800; margin:9px 0 11px; }
+.skillcard p{ font-size:14.5px; line-height:1.55; color:#5c6150; }
+.leert .note{ margin-top:34px; font-size:14px; font-style:italic; color:#6b7060; max-width:62ch; }
+
+/* verder (olive statement) */
+.verder{ background:var(--olive); color:var(--cream); text-align:center; }
+.verder .eyebrow{ color:var(--sage); justify-content:center; display:inline-flex; }
+.verder .h2{ color:var(--cream); max-width:20ch; margin:18px auto 0; }
+.verder .lead{ color:rgba(244,239,224,.9); max-width:54ch; margin:22px auto 0; }
 
 /* cta */
 .cta{ background:var(--ink); color:var(--cream); text-align:center; }
@@ -101,7 +111,7 @@ h1,h2,h3{ font-weight:800; letter-spacing:-.02em; line-height:1.02; }
     <ul class="nav-links">
       <li><a href="../#waarom">Waarom VLIJT</a></li>
       <li><a href="../#vacatures">Vacatures</a></li>
-      <li><a href="../ontwikkeling/">Ontwikkeling</a></li>
+      <li><a href="../ontwikkeling/" aria-current="page">Ontwikkeling</a></li>
       <li><a href="../team/">Team</a></li>
       <li><a href="../faq/">FAQ</a></li>
       <li class="nav-cta"><a class="btn btn--outline" href="../#solliciteer">Solliciteer</a></li>
@@ -111,50 +121,67 @@ h1,h2,h3{ font-weight:800; letter-spacing:-.02em; line-height:1.02; }
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow on-dark">Het team</span>
-    <h1 class="display">Dit is waar je<br>straks bij hoort.</h1>
-    <p class="lead">Hecht, gemotiveerd en vooruitstrevend. Een team waar samenwerking centraal staat, dat elkaar helpt, elke dag wat bijleert en er samen een leuke dag van maakt.</p>
+    <span class="eyebrow on-dark">Jouw ontwikkeling</span>
+    <h1 class="display">Je leert hier<br>écht je vak.</h1>
+    <p class="lead">Bij ons houd je niet alleen de afzuiger vast. We ondersteunen je in cursussen en helpen je zelfstandige handelingen te ontwikkelen, zodat je steeds zelfstandiger werkt en elke dag een stap verder komt.</p>
+    <div class="hero-btns">
+      <a class="btn btn--solid" href="../#vacatures">Bekijk vacatures</a>
+      <a class="btn btn--outline" href="../#solliciteer">Solliciteer</a>
+    </div>
   </div>
 </header>
 
-<section class="band"><img data-par src="../assets/shoot/vlijt-30.jpg" alt="Het team van VLIJT in overleg"></section>
+<section class="band"><img data-par src="../assets/shoot/vlijt-26.jpg" alt="Een assistent aan het werk in de behandelkamer"></section>
 
-<section class="team pad">
+<section class="aanpak pad">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Even voorstellen</span>
-      <h2 class="h2" style="margin-top:20px;">De mensen achter VLIJT</h2>
+      <span class="eyebrow">De VLIJT-aanpak</span>
+      <h2 class="h2" style="margin-top:20px;">Groeien hoort hier<br>bij het werk</h2>
+      <p class="lead">We willen dat je meer kunt dan assisteren alleen. Daarom investeren we in jou: met opleidingen, begeleiding op de werkvloer en de ruimte om steeds meer zelf te doen. Zo bouw je aan een vak waar je trots op bent, in jouw tempo.</p>
     </div>
-    <div class="grid">
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-blonde.jpg')"></div><div class="b"><div class="role">Tandartsassistent</div><h3>Maak kennis</h3><p>"Geen dag is hetzelfde, en dat maakt het juist zo leuk."</p></div></div>
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-38.jpg')"></div><div class="b"><div class="role">Tandarts</div><h3>Maak kennis</h3><p>"Hier krijg ik de tijd om mijn werk echt goed te doen."</p></div></div>
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-purple.jpg')"></div><div class="b"><div class="role">Mondhygiënist</div><h3>Maak kennis</h3><p>"Mijn eigen agenda, mijn eigen patiënten. Precies zoals het hoort."</p></div></div>
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-28.jpg')"></div><div class="b"><div class="role">Preventie-assistent</div><h3>Maak kennis</h3><p>"Het team voelt echt als een tweede thuis."</p></div></div>
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/seb-coral.jpg')"></div><div class="b"><div class="role">Balie &amp; onthaal</div><h3>Maak kennis</h3><p>"Iedereen loopt hier met een glimlach binnen. En buiten."</p></div></div>
-      <div class="member reveal"><div class="ph" style="background-image:url('../assets/shoot/vlijt-23.jpg')"></div><div class="b"><div class="role">Tandarts</div><h3>Maak kennis</h3><p>"We helpen elkaar, elke dag opnieuw. Dat maakt het verschil."</p></div></div>
+    <div class="support">
+      <div class="item reveal"><h3>Cursussen &amp; opleidingsbudget</h3><p>Je krijgt de ruimte en het budget om cursussen te volgen. Wil je een handeling écht onder de knie krijgen? Dan maken we dat mogelijk.</p></div>
+      <div class="item reveal"><h3>Begeleiding op de werkvloer</h3><p>Je leert van collega's die naast je staan. Elke nieuwe handeling oefen je onder begeleiding, tot je het zelfstandig kunt.</p></div>
+      <div class="item reveal"><h3>Stap voor stap zelfstandig</h3><p>Je begint met meekijken en groeit door naar zelfstandig werken. Geen sprong in het diepe, maar rustig opbouwen met vertrouwen.</p></div>
     </div>
-    <p class="note reveal">Dit is alvast een voorproefje. Binnenkort stellen we het hele team met naam en eigen verhaal aan je voor.</p>
   </div>
 </section>
 
-<section class="waarden pad">
+<section class="leert pad">
   <div class="wrap">
-    <div class="reveal" style="max-width:50ch;">
-      <span class="eyebrow">Waar we voor staan</span>
-      <h2 class="h2" style="margin-top:20px;">Wat ons team bindt</h2>
+    <div class="head reveal">
+      <span class="eyebrow">Wat je bij ons leert</span>
+      <h2 class="h2" style="margin-top:20px;">De handelingen die<br>je zelfstandig gaat doen</h2>
+      <p class="lead">Van digitale scans tot noodkronen en fotografie. Dit is het vakwerk dat je bij VLIJT stap voor stap leert beheersen.</p>
     </div>
-    <div class="vals">
-      <div class="val reveal"><h3>Samen</h3><p>Korte lijnen, elkaar helpen, en successen samen vieren. Je staat er nooit alleen voor.</p></div>
-      <div class="val reveal"><h3>Vooruit</h3><p>We blijven leren en investeren in elkaar. Met opleidingen, cursussen en de nieuwste technieken.</p></div>
-      <div class="val reveal"><h3>Met plezier</h3><p>Goede zorg begint bij een fijne sfeer. Daarom lachen we hier net zo veel als we werken.</p></div>
+    <div class="skillcards">
+      <div class="skillcard reveal"><div class="n">01</div><h3>Scannen</h3><p>Digitale afdrukken maken met de intraorale scanner. Comfortabeler voor de patiënt, preciezer voor het werk.</p></div>
+      <div class="skillcard reveal"><div class="n">02</div><h3>Spalkjes plakken</h3><p>Orthodontische spalkjes plaatsen en bijstellen, met oog voor detail en precisie.</p></div>
+      <div class="skillcard reveal"><div class="n">03</div><h3>Verdoven</h3><p>Zelfstandig verdoven, zodat de behandeling soepel en zonder oponthoud doorloopt.</p></div>
+      <div class="skillcard reveal"><div class="n">04</div><h3>Cofferdam aanbrengen</h3><p>Het werkveld droog en schoon houden, voor een beter en veiliger behandelresultaat.</p></div>
+      <div class="skillcard reveal"><div class="n">05</div><h3>Noodkronen maken</h3><p>Tijdelijke kronen vervaardigen en plaatsen, direct in de praktijk als het nodig is.</p></div>
+      <div class="skillcard reveal"><div class="n">06</div><h3>Röntgenfoto's maken</h3><p>Röntgenopnames maken en beoordelen op kwaliteit, zodat de diagnose klopt.</p></div>
+      <div class="skillcard reveal"><div class="n">07</div><h3>Mondfotografie</h3><p>Klinische foto's van het gebit voor het dossier, de diagnose en het overleg.</p></div>
+      <div class="skillcard reveal"><div class="n">08</div><h3>Portretfotografie</h3><p>Portretten voor voor-en-na en een compleet beeld van de patiënt.</p></div>
+      <div class="skillcard reveal"><div class="n">09</div><h3>Attachments aanbrengen</h3><p>Attachments plaatsen voor aligners en klikgebitten, nauwkeurig en volgens plan.</p></div>
     </div>
+    <p class="note reveal">En dit is geen vaste lijst. Groeit je interesse een kant op? Dan kijken we samen hoe je je daarin verder ontwikkelt.</p>
+  </div>
+</section>
+
+<section class="verder pad">
+  <div class="wrap">
+    <span class="eyebrow on-dark">Altijd verder</span>
+    <h2 class="h2">Er is hier altijd een volgende stap</h2>
+    <p class="lead">Wie wil doorgroeien, krijgt bij ons de ruimte. Naar meer verantwoordelijkheid, een specialisatie of een nieuwe rol. Je ontwikkeling stopt niet, en die van ons ook niet.</p>
   </div>
 </section>
 
 <section class="cta pad">
   <div class="wrap">
     <span class="eyebrow">Word collega</span>
-    <h2 class="display">Klaar om er<br>bij te horen?</h2>
+    <h2 class="display">Klaar om je<br>vak te leren?</h2>
     <p class="lead">Bekijk de open vacatures of solliciteer direct. We maken graag kennis met je.</p>
     <div class="cta-btns">
       <a class="btn btn--solid" href="../#vacatures">Bekijk vacatures</a>
