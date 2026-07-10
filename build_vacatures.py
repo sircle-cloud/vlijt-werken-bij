@@ -71,7 +71,7 @@ TEMPLATE = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Vacature {{FUNCTIE}} · Werken bij VLIJT Tandartsen, Eindhoven</title>
 <meta name="description" content="Word {{FUNCTIE_LIDWOORD}} bij VLIJT Tandartsen in Strijp-S, Eindhoven. Salaris {{SALARIS}} bruto p/mnd, 24 tot 38 uur. Solliciteer in 2 minuten.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
