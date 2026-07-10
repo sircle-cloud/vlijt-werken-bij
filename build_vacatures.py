@@ -4,6 +4,7 @@ Stijl: licht thema, full-bleed beeld-hero, SVG-iconen, GSAP, upload-formulier.
 Draaien: python3 build_vacatures.py
 """
 from pathlib import Path
+import urllib.parse
 
 ROOT = Path(__file__).parent
 PUBLIC = ROOT / "public"
@@ -192,6 +193,12 @@ form .btn{ align-self:flex-start; margin-top:8px; }
 #form-ok{ display:none; background:rgba(255,255,255,.1); border:1px solid rgba(244,239,224,.25); border-radius:10px; padding:36px 34px; }
 #form-ok h3{ font-size:24px; font-weight:700; }
 #form-ok p{ margin-top:12px; font-size:16px; color:rgba(244,239,224,.9); }
+.apply-card{ background:rgba(255,255,255,.06); border:1px solid rgba(244,239,224,.22); border-radius:14px; padding:34px 30px; }
+.apply-card .btn{ display:block; width:100%; text-align:center; font-size:17px; padding:16px 22px; }
+.apply-list{ list-style:none; margin:24px 0 20px; padding:0; display:grid; gap:14px; }
+.apply-list li{ display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:rgba(244,239,224,.92); }
+.apply-list .ic{ flex:0 0 auto; width:22px; height:22px; color:#C9A24B; }
+.apply-list .ic svg{ width:22px; height:22px; display:block; }
 
 /* footer */
 .foot{ background:var(--cream-warm); color:var(--ink); border-top:1px solid var(--sage); }
@@ -303,31 +310,14 @@ form .btn{ align-self:flex-start; margin-top:8px; }
       <p class="lead">Laat je gegevens achter, dan bellen we je binnen één werkdag. Liever eerst een dag meelopen? Zeg het, en we regelen het.</p>
     </div>
     <div class="reveal">
-      <form id="sollicitatie-form" novalidate>
-        <input type="hidden" name="functie" value="{{FUNCTIE}}">
-        <div><label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" required></div>
-        <div><label for="telefoon">Telefoon</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel"></div>
-        <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email"></div>
-        <div><label for="bericht">Bericht (optioneel)</label><textarea id="bericht" name="bericht" placeholder="Bijvoorbeeld: ik wil graag eerst een dag meelopen."></textarea></div>
-        <div class="uploads">
-          <label class="upload">
-            <input type="file" name="cv" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-            <span class="up-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5l-8.6 8.6a5 5 0 0 1-7.1-7.1l8.6-8.6a3.3 3.3 0 0 1 4.7 4.7l-8.6 8.6a1.6 1.6 0 0 1-2.3-2.3l7.9-7.9"/></svg></span>
-            <span class="up-tx"><b>CV uploaden</b><small>PDF of Word · graag meesturen</small></span>
-          </label>
-          <label class="upload">
-            <input type="file" name="motivatie" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
-            <span class="up-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h5"/></svg></span>
-            <span class="up-tx"><b>Motivatiebrief</b><small>Optioneel</small></span>
-          </label>
-        </div>
-        <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        <button class="btn btn--solid" type="submit">Verstuur sollicitatie</button>
-        <p class="privacy">We gebruiken je gegevens alleen om contact met je op te nemen over je sollicitatie.</p>
-      </form>
-      <div id="form-ok">
-        <h3>Bedankt voor je sollicitatie!</h3>
-        <p>We nemen binnen één werkdag contact met je op. Tot snel bij VLIJT.</p>
+      <div class="apply-card">
+        <a class="btn btn--solid" href="https://www.vlijttandartsen.nl/solliciteren/?functie={{FUNCTIE_ENC}}">Start je sollicitatie</a>
+        <ul class="apply-list">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>Naam, contactgegevens en je cv, meer niet.</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>Motivatiebrief mag, maar hoeft niet.</span></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>Liever eerst een dag meelopen? Zet het in je bericht.</span></li>
+        </ul>
+        <p class="privacy">Je solliciteert via ons officiële formulier op vlijttandartsen.nl. We gebruiken je gegevens alleen om contact met je op te nemen.</p>
       </div>
     </div>
   </div>
@@ -347,7 +337,7 @@ form .btn{ align-self:flex-start; margin-top:8px; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-document.getElementById('sollicitatie-form').addEventListener('submit', async function(e){
+var _sf=document.getElementById('sollicitatie-form'); if(_sf) _sf.addEventListener('submit', async function(e){
   e.preventDefault();
   var f=e.target, btn=f.querySelector('button[type=submit]');
   if(!f.naam.value.trim() || (!f.telefoon.value.trim() && !f.email.value.trim())){ alert('Vul je naam in, plus een telefoonnummer of e-mailadres.'); return; }
@@ -392,6 +382,7 @@ for vac in VACATURES:
     repl = dict(vac)
     repl["TAKEN_LIS"] = taken_lis
     repl["FUNCTIE_LIDWOORD"] = lidwoord(vac["FUNCTIE"])
+    repl["FUNCTIE_ENC"] = urllib.parse.quote(vac["FUNCTIE"])
     for key, val in repl.items():
         if isinstance(val, list):
             continue
