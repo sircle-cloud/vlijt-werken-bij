@@ -13,8 +13,8 @@ VACATURES = [
     {
         "SLUG": "tandartsassistent",
         "FUNCTIE": "Tandartsassistent",
-        "FOTO_HERO": "../assets/shoot/vlijt-26.jpg",
-        "HERO_POS": "center 30%",
+        "FOTO_HERO": "../assets/shoot/werk-tandartsassistent.jpg",
+        "HERO_POS": "22% 34%",
         "FOTO_TAKEN": "../assets/shoot/vlijt-44.jpg",
         "TAKEN_POS": "center 35%",
         "INTRO": "Jij houdt de behandelkamer draaiend en zorgt dat patiënten zich op hun gemak voelen. Bij ons doe je dat zonder gejaagde agenda.",
@@ -31,8 +31,8 @@ VACATURES = [
     {
         "SLUG": "mondhygienist",
         "FUNCTIE": "Mondhygiënist",
-        "FOTO_HERO": "../assets/shoot/vlijt-8.jpg",
-        "HERO_POS": "center 28%",
+        "FOTO_HERO": "../assets/shoot/werk-mondhygienist.jpg",
+        "HERO_POS": "center 22%",
         "FOTO_TAKEN": "../assets/shoot/vlijt-37.jpg",
         "TAKEN_POS": "center 30%",
         "INTRO": "Jouw eigen agenda en jouw patiënten, met alle ruimte om kwaliteit te leveren. Zo hoort het vak te zijn.",
@@ -49,8 +49,8 @@ VACATURES = [
     {
         "SLUG": "preventie-assistent",
         "FUNCTIE": "Preventie-assistent",
-        "FOTO_HERO": "../assets/shoot/vlijt-6.jpg",
-        "HERO_POS": "center 25%",
+        "FOTO_HERO": "../assets/shoot/werk-preventie.jpg",
+        "HERO_POS": "center 22%",
         "FOTO_TAKEN": "../assets/shoot/vlijt-31.jpg",
         "TAKEN_POS": "center 30%",
         "INTRO": "Jij helpt patiënten elke dag een stap vooruit in de zorg voor hun gebit. Met tijd voor uitleg, niet alleen voor de behandeling.",
